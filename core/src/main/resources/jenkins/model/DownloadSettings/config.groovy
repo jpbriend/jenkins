@@ -2,8 +2,8 @@ package jenkins.security.DownloadSettings
 
 def f = namespace(lib.FormTagLib)
 
-f.section(title:_("Plugin Manager")) {
+f.section(title:_("pluginManager")) {
 	f.entry(field: "useBrowser") {
-		f.checkbox(title: _("Use browser for metadata download"))
+		f.checkbox(title: _("browserForMetadataDownload"))
 	}
 }

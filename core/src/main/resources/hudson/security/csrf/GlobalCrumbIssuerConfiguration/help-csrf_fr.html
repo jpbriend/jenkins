@@ -1,0 +1,23 @@
+<div>
+    Cross Site Request Forgery (ou CSRF/XSRF) est une attaque permettant à une tierce personne non autorisée
+    d'exécuter des actions sur un site web en votre nom. Dans Jenkins, ceci peut permettre à quelqu'un d'effacer
+    des projets, des builds ou de changer la configuration de Jenkins.
+  <p>
+    Lorsque cette option est activée, Jenkins vérifiera une valeur générée une seule fois, ou "crumb", sur toutes les
+    requêtes effectuant des changements sur le serveur Jenkins. Cela inclut n'inporte quelle soumission de
+    formulaire et les appels à l'API.
+  <p>
+    Activer cette option peut amener certain problèmes, tels que:
+  </p>
+  <ul>
+    <li>Certaines fonctionnalités de Jenkins (telle que l'API Remote) sont plus difficiles à utiliser
+      lorsque cette option est activée.</li>
+    <li>Certaines fonctionnalités, notamment dans les plugins non testés avec cette option, peuvent ne plus
+      fonctionner du tout.</li>
+    <li>Si vous accéder à Jenkins à travers un reverse proxy, il pourrait enlever l'en-tête HTTP CSRF,
+      ce qui provoquera l'échec de certaines actions protégées.</li>
+  </ul>
+  <p>
+    Vous pouvez trouver plus d'information sur les failles CSRF  <a href="http://www.owasp.org/index.php/Cross-Site_Request_Forgery">ici</a>.
+  </p>
+</div>
